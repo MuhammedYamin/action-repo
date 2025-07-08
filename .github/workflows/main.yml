@@ -1,0 +1,13 @@
+name: GitHub Webhook Events
+
+on:
+  push:
+  pull_request:
+    types: [opened, closed]
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dummy step
+        run: echo "Triggering webhook event"
